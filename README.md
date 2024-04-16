@@ -1,2 +1,2 @@
 # mouseJiggler
-mouseJiggler
+ctrl + c to exit 
