@@ -1,3 +1,4 @@
-# mouseJiggler
-ctrl + c to exit 
-only works on Windows
+# Mouse Jiggler
+### CTRL + C to exit 
+
+** only works on Windows **
