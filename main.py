@@ -9,6 +9,7 @@ radius = 50
 
 
 def setup():
+    print("CNTRL + C to exit")
     global center_x, center_y
 
     center_x = int(get_monitors()[0].width / 2)
