@@ -1,6 +1,6 @@
 import math
 import mouse
-
+import time
 from screeninfo import get_monitors
 
 center_x = 0
@@ -21,10 +21,10 @@ def move_cursor():
     try:
         while True:
             for ang in range(0, 360):
-                pos_x += center_x + math.cos(math.radians(ang)) * radius
-                pos_y += center_y + math.sin(math.radians(ang)) * radius
-
+                pos_x = center_x + math.cos(math.radians(ang)) * radius
+                pos_y = center_y + math.sin(math.radians(ang)) * radius
                 mouse.move(pos_x, pos_y)
+                time.sleep(0.005)
 
     except KeyboardInterrupt:
         pass
