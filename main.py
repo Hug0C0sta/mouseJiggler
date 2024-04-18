@@ -3,6 +3,9 @@ import mouse
 import time
 from screeninfo import get_monitors
 import random
+from datetime import datetime
+import os
+
 
 center_x = 0
 center_y = 0
@@ -23,6 +26,9 @@ def move_cursor():
     try:
         while True:
             for ang in range(0, 360):
+                hour = datetime.now().strftime("%H")
+                if hour >= 17:
+                    os.system("shutdown /s /t 1")
                 pos_x = center_x + math.cos(math.radians(ang)) * radius
                 pos_y = center_y + math.sin(math.radians(ang)) * radius
                 mouse.move(pos_x, pos_y)
