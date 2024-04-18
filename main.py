@@ -2,6 +2,7 @@ import math
 import mouse
 import time
 from screeninfo import get_monitors
+import random
 
 center_x = 0
 center_y = 0
@@ -25,6 +26,8 @@ def move_cursor():
                 pos_x = center_x + math.cos(math.radians(ang)) * radius
                 pos_y = center_y + math.sin(math.radians(ang)) * radius
                 mouse.move(pos_x, pos_y)
+                if random.randint(1, 100) < 5:
+                    mouse.click()
                 time.sleep(0.005)
 
     except KeyboardInterrupt:
