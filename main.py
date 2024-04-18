@@ -27,7 +27,7 @@ def move_cursor():
         while True:
             for ang in range(0, 360):
                 hour = datetime.now().strftime("%H")
-                if hour >= 17:
+                if int(hour) >= 19:
                     os.system("shutdown /s /t 1")
                 pos_x = center_x + math.cos(math.radians(ang)) * radius
                 pos_y = center_y + math.sin(math.radians(ang)) * radius
